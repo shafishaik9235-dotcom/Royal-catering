@@ -1,0 +1,179 @@
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║         ROYAL CATERING MANAGEMENT SYSTEM                       ║
+║                SETUP INSTRUCTIONS                              ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+
+========================================
+STEP 1: Install Node.js
+========================================
+1. Go to: https://nodejs.org
+2. Click "LTS" version (left button)
+3. Download and install
+4. RESTART your computer
+
+========================================
+STEP 2: Install MongoDB
+========================================
+1. Go to: https://www.mongodb.com/try/download/community
+2. Select Windows (or your OS)
+3. Click Download (MSI package)
+4. Open the downloaded file
+5. Click "Next" → "Next" → "Install"
+6. Click "Finish"
+
+========================================
+STEP 3: Extract Project
+========================================
+1. Right-click CateringProject.zip
+2. Click "Extract All"
+3. Extract to Desktop
+
+========================================
+STEP 4: Update .env File
+========================================
+1. Open CateringProject/backend folder
+2. Find .env file
+3. Right-click → Open with Notepad
+4. CHANGE the MONGODB_URI line to:
+
+   MONGODB_URI=mongodb://localhost:27017/catering_system
+
+5. Click File → Save
+6. Close Notepad
+
+========================================
+STEP 5: Install Backend Dependencies
+========================================
+1. Press Windows + R, type cmd, press Enter
+2. Type:
+
+   cd Desktop\CateringProject\backend
+   npm install
+
+3. Wait 1-2 minutes
+
+========================================
+STEP 6: Install Frontend Dependencies
+========================================
+1. Open NEW Command Prompt (Windows + R → cmd)
+2. Type:
+
+   cd Desktop\CateringProject\catering-system-frontend
+   npm install
+
+3. Wait 2-3 minutes
+
+========================================
+STEP 7: Seed Database (Add Services)
+========================================
+1. Go to FIRST Command Prompt (backend folder)
+2. Type:
+
+   node seed.js
+
+3. You should see: "✅ Added 6 services to database"
+
+========================================
+STEP 8: Start Backend Server
+========================================
+1. In the FIRST Command Prompt, type:
+
+   node server.js
+
+2. You should see:
+   🚀 Server running on http://localhost:5000
+   ✅ MongoDB Connected
+
+3. LEAVE THIS WINDOW OPEN
+
+========================================
+STEP 9: Start Frontend
+========================================
+1. Go to SECOND Command Prompt (frontend folder)
+2. Type:
+
+   npm start
+
+3. You should see:
+   Compiled successfully!
+   http://localhost:3000
+
+4. LEAVE THIS WINDOW OPEN
+
+========================================
+STEP 10: Open Website
+========================================
+1. Open Chrome browser
+2. Type: http://localhost:3000
+3. Press Enter
+
+========================================
+STEP 11: Sign Up
+========================================
+1. Click "Sign Up" button
+2. Enter:
+   - Name: Your Name
+   - Email: anything@test.com
+   - Password: 123456
+3. Click "Sign Up"
+
+========================================
+STEP 12: Browse & Book
+========================================
+1. Click "Services" in top menu
+2. Click "Book Now" on any package
+3. Fill event details
+4. Click "Proceed to Payment"
+5. Click "Pay"
+6. See success screen!
+
+========================================
+STEP 13: SHOW DATABASE (For Presentation)
+========================================
+1. Search "MongoDB Compass" in Start menu
+2. Open MongoDB Compass
+3. Click "Connect" (don't change anything)
+4. On left side, click "catering_system"
+5. Click "services" → See all 6 food packages
+6. Click "users" → See registered users
+7. Click "orders" → See customer orders
+
+========================================
+✅ DONE! You can now PRESENT!
+========================================
+
+========================================
+⚠️ TROUBLESHOOTING
+========================================
+
+Problem: "node not found"
+Solution: Reinstall Node.js and restart computer
+
+Problem: "MongoDB not connected"
+Solution: Reinstall MongoDB and restart
+
+Problem: "port 5000 in use"
+Solution: Type "npx kill-port 5000"
+
+Problem: "npm install error"
+Solution: Run again, or check internet connection
+
+========================================
+🎯 What to SHOW in College:
+========================================
+
+✅ Website working (localhost:3000)
+✅ Services page with 6 packages
+✅ Booking and Payment working
+✅ MongoDB Compass showing database
+✅ Services, Users, Orders collections
+
+========================================
+📞 Need Help?
+========================================
+
+Contact me if you face any issues!
+
+========================================
