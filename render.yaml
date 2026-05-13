@@ -2,7 +2,6 @@ services:
   - type: web
     name: royal-catering-backend
     runtime: node
-    repo: https://github.com/Rameezhub3000/royal-catering-system
     plan: free
     rootDir: backend
     buildCommand: npm install
