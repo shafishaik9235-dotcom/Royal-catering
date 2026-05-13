@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: royal-catering-backend
+    runtime: node
+    repo: https://github.com/Rameezhub3000/royal-catering-system
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://rsk62879_db_user:HA8c4wbZByi55ccv@cluster0.kuoqq8j.mongodb.net/catering_system?retryWrites=true&w=majority
+      - key: JWT_SECRET
+        value: mysecretkey123
+      - key: SESSION_SECRET
+        value: session123
