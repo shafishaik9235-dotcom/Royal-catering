@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Operations</title>
+    <script>
+        function getNumber() {
+            return parseInt(document.getElementById("num").value);
+        }
+
+        function factorial() {
+            let n = getNumber();
+            let fact = 1;
+
+            for (let i = 1; i <= n; i++) {
+                fact = fact * i;
+            }
+
+            document.getElementById("result").innerHTML =
+                "Factorial of " + n + " = " + fact;
+        }
+
+        function fibonacci() {
+            let n = getNumber();
+            let a = 0, b = 1, temp;
+            let series = "";
+
+            while (a <= n) {
+                series += a + " ";
+                temp = a + b;
+                a = b;
+                b = temp;
+            }
+
+            document.getElementById("result").innerHTML =
+                "Fibonacci Series: " + series;
+        }
+
+        function prime() {
+            let n = getNumber();
+            let output = "";
+
+            for (let i = 2; i <= n; i++) {
+                let isPrime = true;
+
+                for (let j = 2; j < i; j++) {
+                    if (i % j == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+
+                if (isPrime) {
+                    output += i + " ";
+                }
+            }
+
+            document.getElementById("result").innerHTML =
+                "Prime Numbers: " + output;
+        }
+
+        function palindrome() {
+            let n = document.getElementById("num").value;
+            let rev = n.split("").reverse().join("");
+
+            if (n == rev) {
+                document.getElementById("result").innerHTML =
+                    n + " is a Palindrome";
+            } else {
+                document.getElementById("result").innerHTML =
+                    n + " is Not a Palindrome";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Number Operations</h2>
+
+    Enter a Number:
+    <input type="text" id="num"><br><br>
+
+    <button onclick="factorial()">Factorial</button>
+    <button onclick="fibonacci()">Fibonacci</button>
+    <button onclick="prime()">Prime</button>
+    <button onclick="palindrome()">Palindrome</button>
+
+    <h3 id="result"></h3>
+
+</body>
+</html>
